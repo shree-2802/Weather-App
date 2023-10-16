@@ -31,11 +31,11 @@ function Weather() {
     const url = `  https://api.openweathermap.org/data/2.5/weather?q=${input}&units=Metric&appid=8034a6af4ba23783a015cbbc8bc1e9f3`;
     let response = await fetch(url);
     let data = await response.json();
-    console.log(data);
-    console.log(data.main.temp);
+    // console.log(data);
+    // console.log(data.main.temp);
     setTemp(data.main.temp);
-    setHumidity(data.main.humidity);
-    setWindSpeed(data.wind.speed);
+    setHumidity(Math.floor(data.main.humidity));
+    setWindSpeed(Math.floor(data.wind.speed));
     setPlace(data.name.icon);
     setInput("");
     document.querySelector(".searchBox").value = "";
