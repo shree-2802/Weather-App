@@ -1,0 +1,11 @@
+body{
+    width:100vw;
+    height:100vh;
+}
+#root{
+    width:inherit;
+    height: inherit;
+}
+*{
+    box-sizing: border-box;
+}
